@@ -32,16 +32,28 @@ public class AccountDetails {
         pieniadze = scanner.nextLong();
         balance = pieniadze + balance;
     }
-    public void withdrawal(){
+
+
+
+
+    public void withdrawal() {
         System.out.println("Podaj kwote wyplaty");
         long kwotaWyplaty;
         kwotaWyplaty = scanner.nextLong();
-        if(balance<kwotaWyplaty){
+        if (balance < kwotaWyplaty) {
             System.out.println("brak wystarczajacych srodkow");
         } else {
             balance = balance - kwotaWyplaty;
         }
-
+    }
+        public long getBalance() {
+            return balance;
 
     }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
+
 }
